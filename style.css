@@ -12,10 +12,3 @@ padding-bottom: 0px;
 padding-top: 0px;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    background-size: cover;
-}
