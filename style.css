@@ -1,14 +1,123 @@
-body
-{background-color: rgb(163, 163, 163);
+body {
+    background: rgb(185, 0, 0);
+    background: linear-gradient(297deg, rgba(185, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 111%);
+    display: block;
+    height: 100%;
     font-family: sans-serif;
+    color: #ffffff;
+    text-align: center;
 }
 
-.container-fluid{
-    background-color: rgb(0, 0, 0);
+.container-fluid {
+    background: linear-gradient(297deg, rgba(185, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 111%);
 }
 
-.navbar{
-padding-bottom: 0px;
-padding-top: 0px;
+.navbar {
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
+.navbar-brand {
+    height: 40px;
+    width: 10px;
+}
+
+.pollo2 {
+    margin-top: -60px;
+    margin-left: -40px;
+}
+
+.cuerpo{
+    line-height: 45px;
+    font-family: "quicksand";
+    padding: 50px;
+}
+
+.cuerpo a{
+    text-decoration: none;
+    color: red;
+}
+
+.tarjeta {
+    background-color: rgba(0, 0, 0, 0.358);
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
+}
+
+.imagen {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.enlaces a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 50px;
+    background-color: rgba(53, 0, 0, 0.526);
+    color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
+    color: rgb(202, 202, 202);
+}
+
+.enlaces a:hover {
+    background-color: #696969;
+}
+
+.redes a {
+    display: inline-block;
+    margin: 10px 13px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.redes a:hover {
+    transform: scale(1.3);
+}
+
+/*parallax*/
+
+.parallax {
+    position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+    min-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute; /* Cubre el área del contenedor */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./assets/esy.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; /* o "contain", según necesites */
+    background-position: center;
+    opacity: 0.5; /* Ajusta la opacidad aquí */
+    z-index: 1; /* Asegura que esté por debajo del contenido */
+}
+
+.parallax > * {
+    position: relative; /* Para que los elementos dentro estén por encima de la imagen de fondo */
+    z-index: 2; /* Asegura que el contenido esté por encima */
+}
+
+
+.vip{
+    padding: 200px;
+}
