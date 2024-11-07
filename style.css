@@ -3,8 +3,8 @@ body {
     height: 100%;
     font-family: sans-serif;
     color: #ffffff;
-    text-align: center;
     background: linear-gradient(297deg, rgba(185, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 111%);
+    text-align: center;
 }
 
 .container-fluid {
@@ -24,28 +24,79 @@ body {
 .pollo2 {
     margin-top: -60px;
     margin-left: -40px;
+
 }
 
-.cuerpo{
+.titulo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 50px 0px 50px 0px;
+}
+
+.titulo h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(130, 28, 28);
+    font-size: 30px;
+    background-color: rgb(48, 3, 3);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+
+}
+
+.cuerpo p {
     line-height: 45px;
     font-family: "quicksand";
-    padding: 50px;
+    padding: 0px 30px;
 }
 
-.cuerpo a{
-    text-decoration: none;
+.cuerpo a {
+    font-family: 'Courier New', Courier, monospace;
     color: red;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.lista {
+    text-decoration: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.lista li {
+    display: inline-block;
+    margin-left: 20px;
 }
 
 .tarjeta {
     background-color: rgba(0, 0, 0, 0.358);
     width: 360px;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     text-align: center;
     padding: 10px;
     border-color: crimson;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(64, 5, 5, 0.39);
+    /* Color de fondo de la tarjeta */
+    border: 2px solid #000000;
+    /* Borde sólido */
+    border-radius: 10px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.908);
+    /* Sombra suave */
+    text-align: center;
+    /* Centra el texto */
+    transition: transform 0.3s;
+    /* Efecto de transición */
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    /* Aumenta el tamaño al pasar el mouse */
 }
 
 .imagen {
@@ -61,14 +112,10 @@ body {
     padding: 10px;
     margin: 10px 0;
     border-radius: 50px;
-    background-color: rgb(53, 0, 0);
+    background-color: rgb(154, 47, 47);
     color: #ffffff;
-    transition: background-color 0.5s;
 }
 
-a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
-    color: rgb(202, 202, 202);
-}
 
 .enlaces a:hover {
     background-color: #696969;
@@ -90,8 +137,10 @@ a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
 /*parallax*/
 
 .parallax {
-    position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
-    overflow: hidden; /* Asegura que el contenido no sobresalga */
+    position: relative;
+    /* Necesario para el posicionamiento del pseudo-elemento */
+    overflow: hidden;
+    /* Asegura que el contenido no sobresalga */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +148,8 @@ a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
 
 .parallax::before {
     content: "";
-    position: absolute; /* Cubre el área del contenedor */
+    position: absolute;
+    /* Cubre el área del contenedor */
     top: 0;
     left: 0;
     right: 0;
@@ -107,38 +157,45 @@ a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
     background-image: url(./assets/esy.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover; /* o "contain", según necesites */
+    background-size: cover;
+    /* o "contain", según necesites */
     background-position: center;
-    opacity: 100%; /* Ajusta la opacidad aquí */
-    z-index: 1; /* Asegura que esté por debajo del contenido */
+    opacity: 100%;
+    /* Ajusta la opacidad aquí */
+    z-index: 1;
+    /* Asegura que esté por debajo del contenido */
 }
 
-.parallax > * {
-    position: relative; /* Para que los elementos dentro estén por encima de la imagen de fondo */
-    z-index: 2; /* Asegura que el contenido esté por encima */
+.parallax>* {
+    position: relative;
+    /* Para que los elementos dentro estén por encima de la imagen de fondo */
+    z-index: 2;
+    /* Asegura que el contenido esté por encima */
 }
 
 
 .overlay {
-    position: absolute; /* Cubre el área del contenedor */
+    position: absolute;
+    /* Cubre el área del contenedor */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(32, 32, 32, 0.901); /* Cambia el color y opacidad según sea necesario */
-    z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+    background-color: rgba(32, 32, 32, 0.901);
+    /* Cambia el color y opacidad según sea necesario */
+    z-index: 1;
+    /* Asegura que esté por encima de la imagen de fondo */
 }
 
-.vip{
+.vip {
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.row{
+.row {
     justify-content: center;
 }
 
 /*footer*/
-
