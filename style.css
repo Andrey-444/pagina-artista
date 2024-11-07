@@ -1,11 +1,10 @@
 body {
-    background: rgb(185, 0, 0);
-    background: linear-gradient(297deg, rgba(185, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 111%);
     display: block;
     height: 100%;
     font-family: sans-serif;
     color: #ffffff;
     text-align: center;
+    background: linear-gradient(297deg, rgba(185, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 111%);
 }
 
 .container-fluid {
@@ -42,12 +41,15 @@ body {
     background-color: rgba(0, 0, 0, 0.358);
     width: 360px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    padding: 50px;
+    padding: 10px;
+    border-color: crimson;
 }
 
 .imagen {
+    background-color: rgba(0, 0, 0, 0.468);
     border-radius: 100%;
     width: 150px;
     height: 150px;
@@ -59,7 +61,7 @@ body {
     padding: 10px;
     margin: 10px 0;
     border-radius: 50px;
-    background-color: rgba(53, 0, 0, 0.526);
+    background-color: rgb(53, 0, 0);
     color: #ffffff;
     transition: background-color 0.5s;
 }
@@ -90,7 +92,6 @@ a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
 .parallax {
     position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
     overflow: hidden; /* Asegura que el contenido no sobresalga */
-    min-height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +109,7 @@ a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
     background-repeat: no-repeat;
     background-size: cover; /* o "contain", según necesites */
     background-position: center;
-    opacity: 0.5; /* Ajusta la opacidad aquí */
+    opacity: 100%; /* Ajusta la opacidad aquí */
     z-index: 1; /* Asegura que esté por debajo del contenido */
 }
 
@@ -118,6 +119,26 @@ a[href="https://www.youtube.com/watch?v=EcqT-05FMzY"] {
 }
 
 
-.vip{
-    padding: 200px;
+.overlay {
+    position: absolute; /* Cubre el área del contenedor */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(32, 32, 32, 0.901); /* Cambia el color y opacidad según sea necesario */
+    z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
 }
+
+.vip{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row{
+    justify-content: center;
+}
+
+/*footer*/
+
