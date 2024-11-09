@@ -28,6 +28,10 @@ body {
     width: 10px;
 }
 
+.capa{
+    background-color: #8c0000;
+}
+
 .pollo2 {
     margin-top: -60px;
     margin-left: -40px;
@@ -51,6 +55,12 @@ body {
     margin-top: 25px;
 
 }
+
+.cuerpo{
+    height:px;
+    align-content: center;
+}
+
 
 .cuerpo p {
     line-height: 45px;
@@ -77,18 +87,16 @@ body {
 }
 
 .parallax {
-    position: relative;
+    position: absolute;
     /* Necesario para el posicionamiento del pseudo-elemento */
-    overflow:hidden;
+    overflow: hidden;
     /* Asegura que el contenido no sobresalga */
-    display: flex;
-    justify-content: center;
     background-size: cover;
     width: 100%;
-    }
-    
-    
-    .parallax::before {
+}
+
+
+.parallax::before {
     content: "";
     position: absolute;
     /* Cubre el área del contenedor */
@@ -97,88 +105,65 @@ body {
     right: 0;
     bottom: 0;
     background-image: url(./assets/esy.jpg);
-    background-attachment: fixed;
     background-repeat: no-repeat;
     width: 100%;
     /* o "contain", según necesites */
     background-position: center;
-    opacity: 100%;
     /* Ajusta la opacidad aquí */
+    background-size: cover;
     z-index: 0;
     /* Asegura que esté por debajo del contenido */
-    }
-    
-    .parallax>* {
+}
+
+.parallax>* {
     position: relative;
     /* Para que los elementos dentro estén por encima de la imagen de fondo */
-    z-index: 1;
+    z-index: 0;
     /* Asegura que el contenido esté por encima */
-    }
-    
-    
-    .overlay {
-    position: absolute;
+}
+
+
+.overlay {
+    position:absolute;
     /* Cubre el área del contenedor */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(32, 32, 32, 0.901);
-    /* Cambia el color y opacidad según sea necesario */
+    background-color: rgba(0, 0, 0, 0.861);
     z-index: 1;
 }
 
-/*
-.container1{
+.contenido{
+    z-index: 2;
     display: flex;
-    background-color: #334c09;
-    height: 500px;
-    width: 100%;
-}*/
-
-.container1{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente los contenedores secundarios */
-    align-items: center; /* Centra verticalmente los contenedores secundarios */
-    background-color: #797979;
-    height: 500px;
-    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
-
-
-.container2{
-    display: flex;
-    flex-wrap: wrap; /* Permitir que las tarjetas se ajusten */
-    justify-content: center; /* Centrar tarjetas horizontalmente */
-    padding: 1rem; /* Añadir padding al contenedor para un espaciado adicional */
-}
-    /*
-    display: flex; /* Hacemos que container2 también use Flexbox */
-   /*  flex-wrap: wrap; Permitir que las tarjetas se ajusten si hay muchas */
-    /* justify-content: center; Centra las tarjetas horizontalmente dentro de container2 */
-   /* background-color: #120929;*/
-
 
 .tarjeta {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 260px; /* Ancho fijo de las tarjetas */
-    margin: 1rem; /* Margen responsivo */
+    max-width: 500px;
+    /* Ancho fijo de las tarjetas */
+    margin: 3rem;
+    min-width: 260px;
+    /* Margen responsivo */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgba(0, 0, 0, 0.39);
-    border: 2px solid #000000;
     border-radius: 10px 10px 0px 0px;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.908);
+    box-shadow: 0 4px 15px rgba(119, 119, 119, 0.908);
     text-align: center;
     transition: transform 0.3s;
+    z-index: 2; /* Mayor que el z-index de la capa para que sea visible */
 }
+
 
 .tarjeta:hover {
     transform: scale(1.05);
     /* Aumenta el tamaño al pasar el mouse */
 }
+
 
 
 .imagenContent {
@@ -202,33 +187,62 @@ body {
     justify-items: center;
 }
 
-.enlaces{
+.breve {
+    background-color: #79797978;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    font-weight: 100;
+    font-size: 12px;
+    height: 120px;
+    padding: 26px 5px;
+    line-height: 30px;
+    margin: 15px;
+}
+
+.enlaces {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    justify-content: space-between;
 }
 
 .enlaces a {
+    border-style: solid;
+    border-color: rgba(158, 158, 158, 0);
     text-decoration: none;
-    padding: 6px 29px;
-    margin: 10px;
-    justify-content: space-around;
+    padding: 12px 29px;
     border-radius: 50px;
-    background-color: rgb(154, 47, 47);
+    background-color: #600e0e8b;
     color: #ffffff;
+    z-index: 1;
 }
 
 
 .enlaces a:hover {
-    background-color: #696969;
+    background-color: #0000008b;
+    box-shadow: 0px 0px 10px 15px #8c0000;
+    border-color: #ff0000;
+    z-index: 0;
+    transition: 2s;
 }
 
+.redes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0px 0px 0px;
+    background-color: #17c13f;
+    box-shadow: 0px 12px 29px 2px rgb(5, 162, 44);
+}
+
+
 .redes a {
-    display: inline-block;
+    display: flex;
     margin: 10px 13px;
-    font-size: 24px;
-    color: #ffffff;
-    text-decoration: none;
+    width: 30px;
+    height: 30px;
     transition: transform 0.2s;
 }
 
