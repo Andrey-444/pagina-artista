@@ -28,10 +28,6 @@ body {
     width: 10px;
 }
 
-.capa{
-    background-color: #8c0000;
-}
-
 .pollo2 {
     margin-top: -60px;
     margin-left: -40px;
@@ -40,7 +36,6 @@ body {
 
 .titulo {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 50px 0px 50px 0px;
 }
 
 .titulo h5 {
@@ -56,9 +51,10 @@ body {
 
 }
 
-.cuerpo{
-    height:px;
+.cuerpo {
+    height: px;
     align-content: center;
+    margin: 50px 0px;
 }
 
 
@@ -67,23 +63,29 @@ body {
     padding: 0px 30px;
 }
 
-.cuerpo a {
-    font-family: 'Courier New', Courier, monospace;
-    color: red;
-    padding: 20px;
-    text-decoration: none;
+
+.lista{
+    padding: 0;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
 }
 
-.lista {
+.lista a{
     text-decoration: none;
-    padding: 20px 0;
+    padding: 0px 0;
     display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
     justify-content: center;
 }
 
 .lista li {
-    display: inline-block;
-    margin-left: 20px;
+    justify-content: center;
+    list-style: none;
 }
 
 .parallax {
@@ -124,7 +126,7 @@ body {
 
 
 .overlay {
-    position:absolute;
+    position: absolute;
     /* Cubre el área del contenedor */
     top: 0;
     left: 0;
@@ -134,7 +136,7 @@ body {
     z-index: 1;
 }
 
-.contenido{
+.contenido {
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -155,7 +157,8 @@ body {
     box-shadow: 0 4px 15px rgba(119, 119, 119, 0.908);
     text-align: center;
     transition: transform 0.3s;
-    z-index: 2; /* Mayor que el z-index de la capa para que sea visible */
+    z-index: 2;
+    /* Mayor que el z-index de la capa para que sea visible */
 }
 
 
@@ -188,7 +191,8 @@ body {
 }
 
 .breve {
-    background-color: #79797978;
+    background-color: #1e1e1e78;
+    border-radius: 25px;
     display: flex;
     align-items: center;
     font-weight: 100;
@@ -200,12 +204,12 @@ body {
 }
 
 .enlaces {
-    height: 180px;
+    height: 290px;
     display: flex;
     align-items: center;
     flex-flow: column;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .enlaces a {
